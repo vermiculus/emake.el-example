@@ -1,0 +1,17 @@
+#+Title: Emacs-Make -- Example
+
+[![Build Status](https://travis-ci.org/vermiculus/emake.el-example.svg?branch=master)](https://travis-ci.org/vermiculus/emake.el-example)
+
+This repository serves as a model for others to start using EMake to
+kick off tests on a service like Travis CI.
+
+- =.travis.yml= :: This is the Travis CI configuration file.  Refer to
+                   its documentation for more information there, but
+                   note that we can test on multiple versions of Emacs
+                   thanks to =emacs-travis.mk=.
+- =Makefile= :: This file handles retrieving the =emacs-travis.mk= and
+                =emake.el= scripts as well as calling EMake to perform
+                various tasks.  See the file for details.
+- =sample.el= :: This is an example project file.
+- =test-sample.el= :: This is an example test file using the ERT
+     unit testing framework available in Emacs.
