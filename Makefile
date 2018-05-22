@@ -20,12 +20,10 @@ clean:
 	rm -f *.elc		# delete compiled files
 	rm -rf .elpa/		# delete dependencies
 
-setup: emacs-travis.mk emake.el
-	export PATH="$(HOME)/bin:$(PATH)"
-	make -f emacs-travis.mk install_emacs
 # Tell Make how to 'setup' this project (e.g., for Travis).  This
 # requires both Emacs to be installed and the `emake.el' script to be
 # available.
+setup: emacs emake.el
 
 # Pass these targets right to EMake.
 install test:
@@ -35,3 +33,15 @@ install test:
 compile: clean
 	$(EMAKE) compile
 
+# The following lets you run this Makefile locally without installing
+# Emacs over and over again.  On Travis (and other CI services), the
+# $CI environment variable is available as "true"; take advantage of
+# this to provide two different implementations of the `emacs' target.
+ifeq ($(CI),true)
+emacs: emacs-travis.mk		# This is CI.  Emacs may not be available, so install it.
+	export PATH="$(HOME)/bin:$(PATH)"
+	make -f emacs-travis.mk install_emacs
+else
+emacs:				# This is not CI.  Emacs should already be available.
+	which emacs && emacs --version
+endif
