@@ -15,6 +15,12 @@ emake.el:
 emacs-travis.mk:
 	wget 'https://raw.githubusercontent.com/flycheck/emacs-travis/master/emacs-travis.mk'
 
+# Teach Make that '.elpa/' is created by `(emake "install")'
+.elpa/:
+	$(EMAKE) install
+
+## Phony targets
+
 # Tell Make how to 'clean' this project
 clean:
 	rm -f *.elc		# delete compiled files
@@ -25,13 +31,17 @@ clean:
 # available.
 setup: emacs emake.el
 
-# Pass these targets right to EMake.
-install test:
-	$(EMAKE) $@
+# 'install' just means to create the .elpa/ directory (i.e., download dependencies)
+install: .elpa/
 
 # We want to clean before we compile.
-compile: clean
+compile:
+	rm -f *.elc
 	$(EMAKE) compile
+
+# Testing needs dependencies
+test: .elpa/
+	$(EMAKE) test
 
 # The following lets you run this Makefile locally without installing
 # Emacs over and over again.  On Travis (and other CI services), the
