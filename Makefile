@@ -50,7 +50,7 @@ test: test-ert test-buttercup
 test-ert: .elpa/
 	$(EMAKE) test		# could also do $(EMAKE) test ert
 
-test-buttercup:
+test-buttercup: .elpa/
 	$(EMAKE) test buttercup
 
 # The following lets you run this Makefile locally without installing
