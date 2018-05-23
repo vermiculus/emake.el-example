@@ -3,7 +3,7 @@ EENVS  = PACKAGE_FILE="sample.el"
 EENVS += PACKAGE_LISP="sample.el"
 EENVS += PACKAGE_TESTS="test-sample.el"
 EENVS += PACKAGE_ARCHIVES="gnu melpa"
-EENVS += PACKAGE_TEST_DEPS="dash"
+EENVS += PACKAGE_TEST_DEPS="dash buttercup"
 EENVS += PACKAGE_TEST_ARCHIVES="melpa"
 # Then, make it easy to invoke Emacs with EMake loaded.
 EMAKE := $(EENVS) emacs -batch -l emake.el --eval "(emake (pop argv))"
@@ -46,8 +46,12 @@ compile:
 	$(EMAKE) compile
 
 # Testing needs dependencies
-test: .elpa/
+test: test-ert test-buttercup
+test-ert: .elpa/
 	$(EMAKE) test		# could also do $(EMAKE) test ert
+
+test-buttercup:
+	$(EMAKE) test buttercup
 
 # The following lets you run this Makefile locally without installing
 # Emacs over and over again.  On Travis (and other CI services), the
