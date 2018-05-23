@@ -1,6 +1,6 @@
 #+Title: Emacs-Make -- Example
 
-[![Build Status](https://travis-ci.org/vermiculus/emake.el-example.svg?branch=master)](https://travis-ci.org/vermiculus/emake.el-example)
+[[https://travis-ci.org/vermiculus/emake.el-example][https://travis-ci.org/vermiculus/emake.el-example.svg?branch=master]]
 
 This repository serves as a model for others to start using EMake to
 kick off tests on a service like Travis CI.
