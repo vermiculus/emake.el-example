@@ -1,5 +1,8 @@
 # First, define the environment variables that drive EMake.
-EENVS := PACKAGE_FILE="sample.el" PACKAGE_LISP="sample.el" PACKAGE_TESTS="test-sample.el" PACKAGE_ARCHIVES="gnu melpa"
+EENVS  = PACKAGE_FILE="sample.el"
+EENVS += PACKAGE_LISP="sample.el"
+EENVS += PACKAGE_TESTS="test-sample.el"
+EENVS += PACKAGE_ARCHIVES="gnu melpa"
 # Then, make it easy to invoke Emacs with EMake loaded.
 EMAKE := $(EENVS) emacs -batch -l emake.el --eval "(emake (pop argv))"
 
