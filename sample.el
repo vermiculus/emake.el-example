@@ -3,7 +3,8 @@
 ;; Copyright (C) 2018  Sean Allred
 
 ;; Author: Sean Allred <code@seanallred.com>
-;; Package-Requires: ((s "0.3"))
+;; URL: https://github.com/vermiculus/emake.el
+;; Package-Requires: ((s "0.3") (emacs "24"))
 ;; Package-Version: 0.1
 ;; Keywords: tools, lisp
 
@@ -19,6 +20,10 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; This file exists to demonstrate the capabilities of Emacs-Make.
 
 ;;; Code:
 
