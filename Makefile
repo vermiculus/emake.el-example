@@ -43,7 +43,7 @@ install: .elpa/
 # We want to clean before we compile.
 compile:
 	rm -f *.elc
-	$(EMAKE) compile
+	$(EMAKE) compile ~error-on-warn
 
 # Testing needs dependencies
 test: test-ert test-buttercup
