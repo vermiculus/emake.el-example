@@ -31,6 +31,8 @@ clean:
 	rm -f *.elc		# delete compiled files
 	rm -rf .elpa/		# delete dependencies
 	rm -rf .elpa.test/
+	rm -f emacs-travis.mk	# delete scripts
+	rm -f emake.el
 
 # Tell Make how to 'setup' this project (e.g., for Travis).  This
 # requires both Emacs to be installed and the `emake.el' script to be
