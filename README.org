@@ -13,5 +13,7 @@ kick off tests on a service like Travis CI.
                 =emake.el= scripts as well as calling EMake to perform
                 various tasks.  See the file for details.
 - =sample.el= :: This is an example project file.
+- =test-buttercup.el= :: This is an example test file using the [[https://github.com/jorgenschaefer/emacs-buttercup][Buttercup]]
+     behavior-driven testing framework [[https://melpa.org/#/buttercup][available on MELPA]].
 - =test-sample.el= :: This is an example test file using the ERT
      unit testing framework available in Emacs.
