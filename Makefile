@@ -10,8 +10,13 @@ EMAKE := $(EENVS) emacs -batch -l emake.el --eval "(emake (pop argv))"
 
 # Set up our phony targets so Make doesn't think there are files by
 # these names.
-.PHONY: clean setup install compile test
+.PHONY: clean setup install compile test help
+.DEFAULT_GOAL: help
 
+help:				## show help
+	@grep -E '(^[A-Za-z_/\.\-]+:.*?##.*$$)|(^##.*$$)' $(MAKEFILE_LIST) \
+		| awk 'BEGIN {FS = ":.*?## "}{printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}' \
+		| sed -e 's/\[32m##/[33m/'
 
 # Tell Make how to 'clean' this project
 clean:				## clean all generated files
