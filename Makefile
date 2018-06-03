@@ -23,7 +23,8 @@ clean:				## clean all generated files
 	rm -f *.elc		# delete compiled files
 	rm -rf .elpa/		# delete dependencies
 	rm -rf .elpa.test/
-	rm -f emacs-travis.mk	# delete scripts
+clean-all: clean		## clean all generated files including scripts
+	rm -f emacs-travis.mk
 	rm -f emake.el
 
 ## Commands useful for Travis
