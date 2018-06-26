@@ -1,3 +1,4 @@
+# EMACS_VERSION should be set in your ~/.profile on your development machine
 EMAKE_SHA1            := 9095599536e5b3ad8c34a3dd3362dbb92ebf701f
 PACKAGE_BASENAME      := sample
 
