@@ -4,7 +4,6 @@ PACKAGE_BASENAME      := sample
 
 # override defaults
 PACKAGE_ARCHIVES      := gnu melpa
-PACKAGE_TESTS         := test-sample.el # normally, EMake would discover these in the test/ directory
 PACKAGE_TEST_DEPS     := dash
 PACKAGE_TEST_ARCHIVES := gnu melpa
 
