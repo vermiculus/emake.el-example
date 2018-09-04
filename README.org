@@ -17,3 +17,9 @@ kick off tests on a service like Travis CI.
      behavior-driven testing framework [[https://melpa.org/#/buttercup][available on MELPA]].
 - =test/sample.el= :: This is an example test file using the ERT
      unit testing framework available in Emacs.
+
+Normally, I would've included =test-buttercup.el= in the =test/=
+directory, but the ~describe~ macro Buttercup defines is not defined
+during ERT-based testing and will cause that script to fail.  ERT and
+Buttercup won't normally be used together, but it is possible.  Refer
+to the EMake documentation if you want to do this.
