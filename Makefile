@@ -8,12 +8,7 @@ PACKAGE_TESTS         := test-sample.el # normally, EMake would discover these i
 PACKAGE_TEST_DEPS     := dash
 PACKAGE_TEST_ARCHIVES := gnu melpa
 
-### Bootstrap and convenience targets
-
 .DEFAULT_GOAL: help
-
-test: test-ert test-buttercup   ## run tests
-lint: lint-package-lint lint-checkdoc ## run lints
 
 emake.mk:                       ## download the emake Makefile
 	wget 'https://raw.githubusercontent.com/vermiculus/emake.el/$(EMAKE_SHA1)/emake.mk'
