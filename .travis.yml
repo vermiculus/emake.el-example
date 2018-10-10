@@ -1,6 +1,9 @@
 language: generic
 sudo: required
 dist: trusty
+os:
+- linux
+- osx
 cache:
 - directories:
   - "$HOME/emacs"
