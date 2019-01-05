@@ -13,4 +13,8 @@ PACKAGE_TEST_ARCHIVES := gnu melpa
 emake.mk:                       ## download the emake Makefile
 	wget 'https://raw.githubusercontent.com/vermiculus/emake.el/$(EMAKE_SHA1)/emake.mk'
 
+clean:
+	rm -rf $(EMAKE_WORKDIR)
+	rm -f $(PACKAGE_LISP:.el=.elc)
+
 include emake.mk
