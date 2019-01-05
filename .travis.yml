@@ -13,7 +13,7 @@ matrix:
   - env: EMACS_VERSION=snapshot
 env:
   global:
-  - EMAKE_SHA1=7691db6611b9c9e9e6f49b83298081ca3c2642b8
+  - EMAKE_SHA1=2dec3626e073c3b4aa88fbedd7ad5d27e530f470
   matrix:
   - EMACS_VERSION=25.1
   - EMACS_VERSION=25.2
