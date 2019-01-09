@@ -37,3 +37,4 @@ script:
 # linting
 - make lint-package-lint
 - make lint-checkdoc
+- make lint-elsa
