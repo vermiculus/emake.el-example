@@ -4,6 +4,13 @@ dist: trusty
 os:
 - linux
 - osx
+addons:
+  homebrew:
+    packages:
+      - autoconf
+      - automake
+      - gnutls
+      - texinfo
 cache:
 - directories:
   - "$HOME/emacs"
@@ -13,7 +20,9 @@ matrix:
   - env: EMACS_VERSION=snapshot
 env:
   global:
-  - EMAKE_SHA1=2dec3626e073c3b4aa88fbedd7ad5d27e530f470
+  - EMAKE_SHA1=4a42b2d8a2fb775389a3e6092924c6a25173a81e
+  - EMACS_INSTALL_DESTINATION=$HOME/emacs
+  - EMACS=$HOME/emacs/bin/emacs
   matrix:
   - EMACS_VERSION=25.1
   - EMACS_VERSION=25.2
