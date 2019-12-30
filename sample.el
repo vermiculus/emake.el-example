@@ -1,4 +1,4 @@
-;;; sample.el --- example file for testing with emake  -*- lexical-binding: t; -*-
+;;; sample.el --- Example file for testing with emake  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018  Sean Allred
 
