@@ -1,6 +1,6 @@
 # EMACS_VERSION should be set in your ~/.profile on your development machine
-EMACS_VERSION         ?= 26.1
-EMAKE_SHA1            ?= 7c2fdc5b5d911c219710ac7560db182f39a5d605
+EMACS_VERSION         ?= 26.3
+EMAKE_SHA1            ?= 4f6a4f75dff0071d0572484197c3ebbdfbb1497f
 PACKAGE_BASENAME      := sample
 
 # override defaults
@@ -17,7 +17,7 @@ ifeq ($(TRAVIS_OS_NAME),osx)
 export EMACS_CONFIGURE_ARGS := --with-ns --with-modules
 endif
 
-setup: emacs
+setup: emacs emake.mk
 
 travis-script:
 # test uncompiled
@@ -34,7 +34,7 @@ travis-script:
 
 emacs: SHELL := /bin/bash
 emacs:
-	bash -e <(curl -fsSkL 'https://raw.githubusercontent.com/vermiculus/emake.el/$(EMAKE_SHA1)/install-emacs')
+	bash -e <(curl -fsSkL 'https://raw.githubusercontent.com/vermiculus/emake.el/$(EMAKE_SHA1)/build-emacs')
 
 clean:
 	rm -rf $(EMAKE_WORKDIR)
