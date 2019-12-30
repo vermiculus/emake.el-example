@@ -1,6 +1,6 @@
 # EMACS_VERSION should be set in your ~/.profile on your development machine
 EMACS_VERSION         ?= 26.3
-EMAKE_SHA1            ?= 4f6a4f75dff0071d0572484197c3ebbdfbb1497f
+EMAKE_SHA1            ?= 5936c6cfd7e9f2aa94ae6a49f614e22c15dc449f
 PACKAGE_BASENAME      := sample
 
 # override defaults
