@@ -8,8 +8,8 @@ PACKAGE_ARCHIVES      := gnu melpa
 PACKAGE_TEST_DEPS     := dash
 PACKAGE_TEST_ARCHIVES := gnu melpa
 
-EMACS_ARGS += --eval '(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")'
-EMACS_ARGS += --eval "(require 'gnutls)"
+#EMACS_ARGS += --eval '(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")'
+#EMACS_ARGS += --eval "(require 'gnutls)"
 
 .DEFAULT_GOAL: help
 
